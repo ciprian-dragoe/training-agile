@@ -1,0 +1,1 @@
+Create a new sprint board from this template [link](https://quire.io/w/ERP_TEMPLATE/12/As_a_User_I_want_to_list_all_the_products_a_use...?sublist=ERP&view=board)
