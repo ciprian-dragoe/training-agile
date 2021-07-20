@@ -7,13 +7,16 @@ def load_module(option):
         sales_controller.menu()
     elif option == 0:
         return 0
+    elif option == 2:
+        
     else:
         raise KeyError()
 
 
 def display_menu():
     options = ["Exit program",
-               "Sales"]
+               "Sales",
+               "HR menu"]
     view.print_menu("Main menu", options)
 
 
