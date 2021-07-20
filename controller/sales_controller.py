@@ -18,7 +18,13 @@ def update_transaction():
 
 
 def delete_transaction():
-    view.print_error_message("Not implemented yet.")
+    to_delete_name = view.get_input("Enter the name of the person you wish to delete")
+    transactions = data_manager.read_table_from_file(sales.DATAFILE)
+    to_write = []
+    for transaction in transactions:
+        if transaction['Customer'] != to_delete_name:
+            to_write.append(transaction)
+    data_manager.write_items_to_file(sales.HEADERS, to_write)
 
 
 def run_operation(option):
