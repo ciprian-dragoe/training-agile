@@ -1,5 +1,5 @@
 from view import terminal as view
-from controller import sales_controller
+from controller import sales_controller, hr_controller
 
 
 def load_module(option):
@@ -8,7 +8,7 @@ def load_module(option):
     elif option == 0:
         return 0
     elif option == 2:
-        
+        hr_controller.display_menu()
     else:
         raise KeyError()
 
