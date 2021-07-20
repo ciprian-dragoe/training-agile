@@ -1,6 +1,7 @@
 from model.sales import sales
 from model import data_manager
 from view import terminal as view
+import datetime
 
 
 def list_transactions():
@@ -18,6 +19,18 @@ def update_transaction():
     view.print_table(transactions)
     
     return True
+
+
+
+def next_birthdays():
+    upcoming_birtdays = []
+    employees = data_manager.read_table_from_file(DATAFILE)
+    today = int((datetime.today()).strftime("%j"))
+    next_day = today + 14
+    for employee in employees:
+        if int((datetime.strptime(employee[2], "%Y-%m-%d")).strftime("%j")) >= today and int((datetime.strptime(employee[2], "%Y-%m-%d")).strftime("%j")) <= next_day:
+            upcoming_birtdays.append(employee[1])
+    return upcoming_birtdays
 
 
 def delete_transaction():
@@ -63,3 +76,5 @@ def menu():
             run_operation(int(operation))
         except KeyError as err:
             view.print_error_message(err)
+
+
