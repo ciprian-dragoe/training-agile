@@ -17,13 +17,7 @@ def update_transaction():
     transactions = data_manager.read_table_from_file(sales.DATAFILE)
     view.print_table(transactions)
     
-    id = view.get_input("Which transaction do you want to update?")
-    # for f in sales.HEADERS:
-
-    # fields = [None]
-
-
-    # data_manager.write_items_to_file(sales.DATAFILE, fields)
+    return True
 
 
 def delete_transaction():
