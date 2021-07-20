@@ -30,6 +30,12 @@ def delete_transaction():
     data_manager.write_items_to_file(sales.HEADERS, to_write)
 
 
+def list_employes():
+    employees = []
+    print(employees)
+    print("there are no emplyees now, this is a ghost company")
+
+
 def run_operation(option):
     if option == 1:
         list_transactions()
@@ -39,6 +45,8 @@ def run_operation(option):
         update_transaction()
     elif option == 4:
         delete_transaction()
+    elif option == 5:
+        list_employes()
     elif option == 0:
         return
     else:
@@ -50,7 +58,8 @@ def display_menu():
                "List transactions",
                "Add new transaction",
                "Update transaction",
-               "Remove transaction"]
+               "Remove transaction",
+               "List emplyes"]
     view.print_menu("Sales", options)
 
 
