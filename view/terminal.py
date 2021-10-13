@@ -43,8 +43,9 @@ def print_table(table):
     print("=======================")
     for item in table:
         for sub_item in item:
-            print(sub_item)
+            print('{0:>10}'.format(sub_item))
         print("-----------------------")
+    print("=======================")
 
 
 def get_input(label):
