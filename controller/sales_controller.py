@@ -14,7 +14,13 @@ def add_transaction():
 
 
 def update_transaction():
-    view.print_error_message("Not implemented yet.")
+    transactions = data_manager.read_table_from_file(sales.DATAFILE)
+    fields = view.get_inputs(sales.HEADERS)
+    for i in range(len(transactions)):
+        if i == 0:
+            delete = delete_transaction(transactions[id:])
+            update = data_manager.write_items_to_file(transactions)
+    view.print_table(transactions)
 
 
 def delete_transaction():
