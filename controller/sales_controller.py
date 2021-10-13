@@ -18,7 +18,7 @@ def update_transaction():
 
 
 def delete_transaction():
-    view.print_error_message("Not implemented yet.")
+    'test'
 
 
 def run_operation(option):
