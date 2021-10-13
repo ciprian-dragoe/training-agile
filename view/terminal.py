@@ -34,6 +34,10 @@ def print_general_results(result, label):
     pass
 
 
+def print_hr_menu():
+    pass
+
+
 def print_table(table):
     """Prints tabular data like above.
 
@@ -49,14 +53,14 @@ def print_table(table):
 
 def get_input(label):
     return input(label)
- 
+
 
 def get_inputs(fields):
     result = []
     for field in fields:
         result.append(get_input(f"{field}: "))
     return result
- 
+
 
 def print_error_message(message):
     """Prints an error message to the terminal.
